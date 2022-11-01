@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'hangoverpotions'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_827CA5B7FBC34934ADFE6445478F3837 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_94AFA38FF9E44E4DA34F7C4A0DC368C0 }}
