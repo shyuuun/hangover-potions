@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;1,400&display=swap');
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;   
+
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left : 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+
+@font-face {
+    font-family: 'Spooky Webbie';
+    src: url('Assets/fonts/SpookyWebbie.woff2') format('woff2'),
+        url('Assets/fonts/SpookyWebbie.woff') format('woff'),
+        url('Assets/fonts/SpookyWebbie.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+nav .logo {
+    position: relative;
+    font-weight: 100;
+    font-family: 'Spooky Webbie';
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: 3px;
+    transition: 0.6s;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+nav ul li {
+    position: relative;
+    list-style: none;
+    margin-left: 20px;
+}
+nav ul li a  {
+    position: relative;
+    text-decoration: none;
+    margin-left: 6px 15px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+nav.sticky {
+    padding: 5px 100px;
+    background: #460255;
+}
+
+nav.sticky ul li a  {
+    color: #fff;
+}
+
+.header-content {
+    position: relative;
+
+
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.611)) ,url(Assets/images/5924941.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.banner-header-text {
+    font-family: 'Spooky Webbie';
+    color: #fff;
+    font-weight: 500;
+    font-size: 4em;
+    text-align: center;
+}
+
+.mission {
+    padding: 320px;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.611)), url(Assets/images/mission.jpg);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mission-left {
+    background-color: #011013;
+    border-radius: 30px;
+    padding: 50px;
+}
+
+.mission-header {
+    font-family: 'Spooky Webbie';
+    font-weight: 500;
+    text-align: center;
+    font-size: 2em;
+}
+
+.vision {
+    padding: 320px;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.611)),url(Assets/images/witch-cauldron.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vision-middle {
+    text-align: center;
+
+}
+
+.comment-section {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.611)) ,url(Assets/images/comment-section.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.comment-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-right{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.button {
+    background-color: #011013;
+    color: #fff;
+
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Spooky Webbie';
+
+    border: none;
+    padding: 15px;
+
+    margin: 4px 2px;    
+
+    cursor: pointer;
+}
+
+.button:hover{
+    opacity: .9;
+}
+
+.input_text {
+    padding: 1em;
+    margin-bottom: 1.2em;
+    
+    border: none;
+    border-bottom: 1px solid #384047;
+
+    width: 100%;
+}
+
+.input_text:focus{
+    outline: none;
+}
+
+
+
+.about-us{    
+    padding: 320px;
+    height: 100vh;
+    width: 100%;
+    background-image: url("Assets/images/about-us.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.about-us-right {
+    text-align: center;
+}
+
+.about-us-header {
+    font-family: 'Spooky Webbie';
+    font-weight: 500;
+    font-size: 4em;
+}
+
+
+
+

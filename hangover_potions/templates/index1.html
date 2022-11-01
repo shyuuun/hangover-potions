@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangover Potions</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style1.css' %}">
+
+</head>
+
+<body>
+    <header id="home">
+        <nav>
+            <h1><a href="#home" class="logo">Hangover Potions</a></h1>
+            <ul>
+                <li ><a href="#mission">Mission</a></li>
+                <li ><a href="#vision">Vision</a></li>
+                <li ><a href="#about-us">About Us</a></li>
+            </ul>
+        </nav>
+        <section class="banner">
+            <h1 class="banner-header-text">Hangover Potions</h1>
+            <img src="{% static 'Assets/images/header-witch.png' %}">
+        </section>
+
+    </header>
+    <section class="mission" id="mission">
+        <div class="mission-left">
+            <h3 class="mission-header">Mission</h3>
+            <p class="mission-text">
+                To fully satisfy the customers' needs, the proponents commit to
+                consistently providing innovative, reasonable, and
+                quality food and beverage products and services.
+                They intend to do it through:
+            </p>
+            <br>
+            <ul>
+                <li>Enabling our employees to perform to their full potential.</li>
+                <li>Our commitment to providing the best service possible.</li>
+                <li>Our mutual belief in and appreciation for each of our clients.</li>
+            </ul>
+        </div>
+        <div class="mission-right">
+            <img src="{% static 'Assets/images/mission-witch.png' %}" width="320" height="480">
+        </div>
+    </section>
+
+    <section class="vision" id="vision">
+
+        <div class="vision-middle">
+            <h3 class="mission-header">Vision</h3>
+            <p>
+                To be one of the leading providers of quality,
+                reasonable food and entertainment services
+                in the bar and restaurant industry.
+            </p>
+        </div>
+
+    </section>
+    <section class="comment-section">
+        <div class="comment-left">
+
+            <form action="addcomment/" id="usrform">
+                <input class="input_text" type="text" id="user" name="user" placeholder="Enter your first name" required>
+                <textarea name="content" form="usrform">Enter text here...</textarea>
+                <button class="button" type="submit">
+                    Submit!
+                </button>
+            </form>
+
+            
+        </div>
+        <div class="comment-right">
+            {% for x in comments %}
+                <div class="comment-info">
+                    <i class="fa-solid fa-user-secret"></i></i>
+                <p>{{x.user}}.</p>
+                <p>{{x.date}}</p>
+                </div>
+                <div class="comment-text">
+                    <p>{{x.content}}</p>
+                </div>
+            {% endfor %}
+    
+        </div>
+
+    </section>
+    <section class="about-us" id="about-us">
+        <div class="about-us-right">
+            <h1 class="about-us-header">Hangover Potions</h1>
+            <br>
+            <h3>hangover.potions@gmail.com</h3>
+            <br>
+            <p>Follow us on social media</p>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></i></a>
+        </div>
+
+    </section>
+
+
+    <script src="https://kit.fontawesome.com/443cbaef6a.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        
+        window.addEventListener("scroll", function () {
+            var nav = document.querySelector("nav");
+            nav.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
+   
+</body>
+
+</html>
