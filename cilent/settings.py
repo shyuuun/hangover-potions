@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-13h5gx%yh8#o6ha^*qivi=zz4x_b4n(ooo+t_!qc4@t)xdmj7^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['hangoverpotions.azurewebsites.net']
+ALLOWED_HOSTS = ['hangoverpotions.azurewebsites.net', '127.0.0.1']
 
 
 # Application definition
@@ -120,6 +120,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
