@@ -18,6 +18,8 @@
             <ul>
                 <li ><a href="#mission">Mission</a></li>
                 <li ><a href="#vision">Vision</a></li>
+                <li ><a href="#qr-code">Scan</a></li>
+                <li ><a href="#comment">Feedback</a></li>
                 <li ><a href="#about-us">About Us</a></li>
             </ul>
         </nav>
@@ -60,12 +62,16 @@
         </div>
 
     </section>
-    <section class="comment-section">
+    <section class="qr-section" id="qr-code">
+        <img src="{% static 'Assets/images/scan-code.png' %}">
+    </section>
+    <section class="comment-section" id="comment">
         <div class="comment-left">
-
+            <h3 class="comment-header">Give us a comment!!!</h2>
+            <br>
             <form action="addcomment/" id="usrform">
                 <input class="input_text" type="text" id="user" name="user" placeholder="Enter your first name" required>
-                <textarea name="content" form="usrform">Enter text here...</textarea>
+                <textarea class='text_area' name="content" form="usrform" placeholder="Enter text here..."></textarea>
                 <button class="button" type="submit">
                     Submit!
                 </button>
@@ -74,6 +80,7 @@
             
         </div>
         <div class="comment-right">
+            <h3 class="comment-header">Your feedback!</h2>
             {% for x in comments %}
                 <div class="comment-info">
                     <i class="fa-solid fa-user-secret"></i></i>
